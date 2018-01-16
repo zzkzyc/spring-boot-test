@@ -1,14 +1,17 @@
 package com.zzk.spring.boot.pojo;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * Created by zhouzongkun on 2018/1/16.
  */
 public class User {
 
+    @ApiModelProperty(value = "用户id")
     private Long id;
-
+    @ApiModelProperty(value = "用户名称")
     private String name;
-
+    @ApiModelProperty(value = "用户年龄")
     private Integer age;
 
     public Long getId() {
