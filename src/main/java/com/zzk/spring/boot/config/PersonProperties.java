@@ -1,20 +1,20 @@
 package com.zzk.spring.boot.config;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by zhouzongkun on 2018/1/16.
  */
+@ConfigurationProperties(prefix = "zzk")
 @Component
 public class PersonProperties {
 
-    @Value(value = "${zzk.name}")
     private String name;
 
-    @Value(value = "${zzk.email}")
     private String email;
+
+    private Integer age;
 
     public String getName() {
         return name;
@@ -30,5 +30,13 @@ public class PersonProperties {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }

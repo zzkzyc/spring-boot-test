@@ -21,6 +21,8 @@ public class PersonPropertiesTest {
     public void readPersonProperties() {
         Assert.assertEquals(personProperties.getName(), "周宗坤");
         Assert.assertEquals(personProperties.getEmail(), "861728602@qq.com");
+
+        System.out.println(personProperties.getAge());
     }
 
 }
